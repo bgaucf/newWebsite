@@ -1,0 +1,49 @@
+import knightroImage from '../assets/images/UCFS031_web_1_1.png';
+import HeroBackground from '../components/HeroBackground';
+
+const officers = [
+  { name: 'Colin Montie', role: 'President' },
+  { name: 'Ryan Cannon', role: 'Vice President' },
+  { name: 'Aiden Ellis', role: 'Secretary' },
+  { name: 'Jayden Cruz-Berdecia', role: 'DeVos SBM Liaison' },
+  { name: 'Isaiah Weaver', role: 'Treasurer' },
+  { name: 'Sam Jolicoeur', role: 'Treasurer' },
+  { name: 'Robert Hudson', role: 'Director of Projects & Competitions' },
+  { name: 'Matthew Berliant', role: 'Treasurer' },
+  { name: 'Matthew Henderson', role: 'Treasury Assistant' },
+  { name: 'Gabriel Macedo', role: 'Treasury Assistant' },
+];
+
+export default function Officers() {
+  return (
+    <main className="flex-1">
+      <section className="relative text-white py-16 md:py-24 overflow-hidden min-h-[300px] flex flex-col justify-center">
+        <HeroBackground />
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 z-10">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gold">
+            Officers
+          </h1>
+          <h2 className="text-xl text-gray-300 mb-12">Organization Leadership</h2>
+          <div className="grid sm:grid-cols-2 gap-6">
+            {officers.map((officer, i) => (
+              <div
+                key={i}
+                className="flex items-center gap-6 bg-white/10 rounded-xl p-6 border border-gold/20 hover:border-gold/40 transition-colors"
+              >
+                <img
+                  src={knightroImage}
+                  alt=""
+                  className="w-20 h-20 rounded-full object-cover flex-shrink-0 ring-2 ring-gold/50"
+                />
+                <div>
+                  <h3 className="text-xl font-bold text-gold">{officer.name}</h3>
+                  <p className="text-gray-300">{officer.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}

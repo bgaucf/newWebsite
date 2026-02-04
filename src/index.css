@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  /* Refined gold - less yellow, more professional */
+  --color-gold: #B8860B;
+  --color-gold-dark: #8B6914;
+  --color-gold-pale: #F5ECD8;
+}
+
+/* UCF Black & Gold theme */
+:root {
+  --ucf-black: #000000;
+  --ucf-gold: #B8860B;
+  --ucf-gold-dark: #8B6914;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #1a1a1a;
+  background-color: #fafafa;
+}
