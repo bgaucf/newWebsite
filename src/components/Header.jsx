@@ -5,9 +5,9 @@ import logo from '../assets/images/bga.jpg';
 const navItems = [
   { path: '/', label: 'Home' },
   { path: '/about', label: 'About' },
+  { path: '/calendar', label: 'Calendar' },
   { path: '/research', label: 'Research' },
   { path: '/competitions', label: 'Competitions' },
-  { path: '/calendar', label: 'Calendar' },
 ];
 
 export default function Header() {
