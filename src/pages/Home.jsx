@@ -32,13 +32,13 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative text-white py-20 md:py-32 overflow-hidden min-h-[500px] flex flex-col justify-center">
         <video
-          src="/tKjFX7IMqIoBSwAY.mp4"
+          src="/ucftunnel.mp4"
           autoPlay
           loop
           muted
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
-          aria-label="UCF Bounce House"
+          aria-label="UCF tunnel"
         />
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 text-center z-10">
