@@ -14,6 +14,7 @@ import Hockey from './pages/research/Hockey';
 import Other from './pages/research/Other';
 import Competitions from './pages/Competitions';
 import FantasySports from './pages/FantasySports';
+import Calendar from './pages/Calendar';
 
 export default function App() {
   return (
@@ -34,6 +35,7 @@ export default function App() {
           <Route path="/research/other" element={<Other />} />
           <Route path="/competitions" element={<Competitions />} />
           <Route path="/competitions/fantasy-sports" element={<FantasySports />} />
+          <Route path="/calendar" element={<Calendar />} />
         </Routes>
         <Footer />
       </div>
