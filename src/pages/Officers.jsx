@@ -3,19 +3,23 @@ import colinHeadshot from '../assets/images/colinhs.jpg';
 import aidenHeadshot from '../assets/images/aidenellishs.jpg';
 import berliantHeadshot from '../assets/images/berlianths.jpg';
 import matthewHendersonHeadshot from '../assets/images/matthendersonhs.jpg';
+import jaydenHeadshot from '../assets/images/jaydenhs.jpg';
+import samHeadshot from '../assets/images/samhs.jpg';
+import robertHeadshot from '../assets/images/roberths.jpg';
+import gabeHeadshot from '../assets/images/gabehs.jpg';
 import HeroBackground from '../components/HeroBackground';
 
 const officers = [
   { name: 'Colin Montie', role: 'President', image: colinHeadshot },
   { name: 'Ryan Cannon', role: 'Vice President', image: knightroImage },
   { name: 'Aiden Ellis', role: 'Secretary', image: aidenHeadshot },
-  { name: 'Jayden Cruz-Berdecia', role: 'DeVos SBM Liaison', image: knightroImage },
+  { name: 'Jayden Cruz-Berdecia', role: 'DeVos SBM Liaison', image: jaydenHeadshot },
   { name: 'Isaiah Weaver', role: 'Treasurer', image: knightroImage },
-  { name: 'Sam Jolicoeur', role: 'Treasurer', image: knightroImage },
-  { name: 'Robert Hudson', role: 'Director of Projects & Competitions', image: knightroImage },
+  { name: 'Sam Jolicoeur', role: 'Treasurer', image: samHeadshot },
+  { name: 'Robert Hudson', role: 'Director of Projects & Competitions', image: robertHeadshot },
   { name: 'Matthew Berliant', role: 'Treasurer', image: berliantHeadshot },
   { name: 'Matthew Henderson', role: 'Treasury Assistant', image: matthewHendersonHeadshot },
-  { name: 'Gabriel Macedo', role: 'Treasury Assistant', image: knightroImage },
+  { name: 'Gabriel Macedo', role: 'Treasury Assistant', image: gabeHeadshot },
 ];
 
 export default function Officers() {

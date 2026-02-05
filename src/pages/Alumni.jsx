@@ -1,4 +1,7 @@
 import knightroImage from '../assets/images/UCFS031_web_1_1.png';
+import nathanHeadshot from '../assets/images/nathanhs.jpg';
+import asaHeadshot from '../assets/images/asahs.jpg';
+import nickThomasHeadshot from '../assets/images/nickthomashs.jpg';
 import HeroBackground from '../components/HeroBackground';
 
 const notableAlumni = [
@@ -6,21 +9,25 @@ const notableAlumni = [
     name: 'Nathan Wright',
     role: 'Alumni President & Mentor',
     title: 'Performance Science Analyst - IMG Academy',
+    image: nathanHeadshot,
   },
   {
     name: 'Asa Arnold',
     role: 'Student Manager Athletics - Notre Dame',
     title: 'Host of Analytics w/ Asa podcast | MS Business Analytics - Notre Dame',
+    image: asaHeadshot,
   },
   {
     name: 'Nicolas Thomas',
     role: 'Associate Producer',
     title: 'EA (Electronic Arts)',
+    image: nickThomasHeadshot,
   },
   {
     name: 'Nicholas Davidson',
     role: 'Operations Analyst',
     title: 'BNY Mellon',
+    image: knightroImage,
   },
 ];
 
@@ -40,8 +47,8 @@ export default function Alumni() {
                 className="flex items-center gap-6 bg-white/10 rounded-xl p-6 border border-gold/20 hover:border-gold/40 transition-colors"
               >
                 <img
-                  src={knightroImage}
-                  alt=""
+                  src={alum.image}
+                  alt={alum.name}
                   className="w-24 h-24 rounded-full object-cover flex-shrink-0 ring-2 ring-gold/50"
                 />
                 <div>
