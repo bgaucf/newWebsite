@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import stadiumImage from '../assets/images/bouncehousefireworks.png';
 import researchImage from '../assets/images/person-drawing-symbols-coming-out-light-bulb-top-book-1.jpg';
 import skillDevImage from '../assets/images/skills development plan.png';
 import professionalInsightsImage from '../assets/images/BGAProfessionalLogo.png';
@@ -32,10 +31,14 @@ export default function Home() {
     <main className="flex-1">
       {/* Hero Section */}
       <section className="relative text-white py-20 md:py-32 overflow-hidden min-h-[500px] flex flex-col justify-center">
-        <img
-          src={stadiumImage}
-          alt="UCF Bounce House fireworks"
+        <video
+          src="/tKjFX7IMqIoBSwAY.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
           className="absolute inset-0 w-full h-full object-cover"
+          aria-label="UCF Bounce House"
         />
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 text-center z-10">
