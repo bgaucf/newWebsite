@@ -7,7 +7,6 @@ import jaydenHeadshot from '../assets/images/jaydenhs.jpg';
 import samHeadshot from '../assets/images/samhs.jpg';
 import robertHeadshot from '../assets/images/roberths.jpg';
 import gabeHeadshot from '../assets/images/gabehs.jpg';
-import HeroBackground from '../components/HeroBackground';
 
 const officers = [
   { name: 'Colin Montie', role: 'President', image: colinHeadshot },
@@ -24,19 +23,18 @@ const officers = [
 
 export default function Officers() {
   return (
-    <main className="flex-1">
-      <section className="relative text-white py-16 md:py-24 overflow-hidden min-h-[300px] flex flex-col justify-center">
-        <HeroBackground />
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 z-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gold">
+    <main className="flex-1 bg-cream">
+      <section className="py-16 md:py-24">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <h1 className="text-4xl md:text-5xl font-bold mb-2 text-black">
             Officers
           </h1>
-          <h2 className="text-xl text-gray-300 mb-12">Organization Leadership</h2>
+          <p className="text-xl text-gray-600 mb-12">Organization Leadership</p>
           <div className="grid sm:grid-cols-2 gap-6">
             {officers.map((officer, i) => (
               <div
                 key={i}
-                className="flex items-center gap-6 bg-white/10 rounded-xl p-6 border border-gold/20 hover:border-gold/40 transition-colors"
+                className="flex items-center gap-6 bg-cream-dark rounded-xl p-6 border border-gray-200 hover:border-gold/50 transition-colors group"
               >
                 <img
                   src={officer.image}
@@ -44,8 +42,8 @@ export default function Officers() {
                   className="w-20 h-20 rounded-full object-cover flex-shrink-0 ring-2 ring-gold/50"
                 />
                 <div>
-                  <h3 className="text-xl font-bold text-gold">{officer.name}</h3>
-                  <p className="text-gray-300">{officer.role}</p>
+                  <h3 className="text-xl font-bold text-black group-hover:text-gold-dark">{officer.name}</h3>
+                  <p className="text-gray-600">{officer.role}</p>
                 </div>
               </div>
             ))}

@@ -52,7 +52,7 @@ export default function Home() {
       </section>
 
       {/* Mission Statement */}
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-16 md:py-20 bg-cream">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
             The mission of Black & Gold Analytics is to transform curiosity into professional competence for aspiring
@@ -66,7 +66,7 @@ export default function Home() {
       </section>
 
       {/* Opportunities Section */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-20 md:py-28 bg-cream">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-black">
             Opportunities
@@ -75,7 +75,7 @@ export default function Home() {
             {opportunities.map((opp, index) => (
               <div
                 key={index}
-                className="bg-gray-50 rounded-xl overflow-hidden border border-gray-200 hover:border-gold/50 hover:shadow-lg transition-all group"
+                className="bg-cream-dark rounded-xl overflow-hidden border border-gray-200 hover:border-gold/50 hover:shadow-lg transition-all group"
               >
                 <div className="aspect-video w-full overflow-hidden bg-gray-200">
                   <img

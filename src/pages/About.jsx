@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import HeroBackground from '../components/HeroBackground';
 
 const extracurriculars = [
   { title: 'Trivia Nights', description: 'Trivia designed by Alumni and DeVos Program members' },
@@ -21,20 +20,10 @@ const values = [
 
 export default function About() {
   return (
-    <main className="flex-1">
-      {/* Hero */}
-      <section className="relative text-white py-16 md:py-24 overflow-hidden min-h-[280px] flex flex-col justify-center">
-        <HeroBackground />
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 text-center z-10">
-          <h1 className="text-4xl md:text-5xl font-bold text-gold">
-            About Us
-          </h1>
-        </div>
-      </section>
-
-      {/* About explanation */}
-      <section className="py-16 md:py-20 bg-white">
+    <main className="flex-1 bg-cream">
+      <section className="py-16 md:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-black">About Us</h1>
           <p className="text-lg text-gray-700 leading-relaxed mb-6">
             Black and Gold Analytics (BGA) is a student-led organization dedicated to developing the next generation
             of sports analysts.
@@ -56,50 +45,26 @@ export default function About() {
             to grow your skills or a professional interested in mentoring, partnering, or connecting with emerging
             talent, BGA offers a space where curiosity becomes experience and ideas become actionable insights.
           </p>
-        </div>
-      </section>
-
-      {/* Officers & Alumni */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <h2 className="text-2xl md:text-3xl font-bold mb-8">People</h2>
-          <div className="grid sm:grid-cols-2 gap-6">
+          <div className="flex flex-wrap items-center gap-3 mt-10 pt-8 border-t border-gray-200">
+            <span className="text-base font-semibold text-gray-700">Meet the team:</span>
             <Link
               to="/about/officers"
-              className="flex items-center gap-4 p-6 rounded-xl bg-white border border-gray-200 hover:border-gold/50 hover:shadow-lg transition-all group"
+              className="inline-flex items-center px-4 py-2 rounded-lg bg-cream-dark border-2 border-gold/40 text-gold-dark font-semibold hover:border-gold hover:bg-gold-pale/50 transition-colors"
             >
-              <div className="w-14 h-14 rounded-full bg-gold/20 flex items-center justify-center text-2xl group-hover:bg-gold/30 transition-colors">
-                👥
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-black group-hover:text-gold-dark transition-colors">Officers</h3>
-                <p className="text-gray-600 text-sm">Current leadership &amp; members</p>
-              </div>
-              <svg className="w-5 h-5 text-gold ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
+              Officers
             </Link>
             <Link
               to="/about/alumni"
-              className="flex items-center gap-4 p-6 rounded-xl bg-white border border-gray-200 hover:border-gold/50 hover:shadow-lg transition-all group"
+              className="inline-flex items-center px-4 py-2 rounded-lg bg-cream-dark border-2 border-gold/40 text-gold-dark font-semibold hover:border-gold hover:bg-gold-pale/50 transition-colors"
             >
-              <div className="w-14 h-14 rounded-full bg-gold/20 flex items-center justify-center text-2xl group-hover:bg-gold/30 transition-colors">
-                🎓
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-black group-hover:text-gold-dark transition-colors">Alumni</h3>
-                <p className="text-gray-600 text-sm">Notable alumni &amp; where they are now</p>
-              </div>
-              <svg className="w-5 h-5 text-gold ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
+              Alumni
             </Link>
           </div>
         </div>
       </section>
 
       {/* Mission, Vision, Values */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-cream">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 space-y-12">
           <div>
             <h2 className="text-2xl font-bold text-black mb-4">Mission Statement</h2>
@@ -134,7 +99,7 @@ export default function About() {
       </section>
 
       {/* Get in Touch */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-cream-dark">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <h2 className="text-2xl md:text-3xl font-bold mb-8">Contact Us</h2>
           <div className="space-y-4 text-lg">
@@ -168,12 +133,12 @@ export default function About() {
       </section>
 
       {/* Extracurriculars */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-cream">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <h2 className="text-2xl md:text-3xl font-bold mb-12">Extracurriculars</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {extracurriculars.map((item, index) => {
-              const cardClass = 'rounded-xl p-6 bg-gray-50 border border-gray-200 hover:border-gold/50 transition-colors';
+              const cardClass = 'rounded-xl p-6 bg-cream-dark border border-gray-200 hover:border-gold/50 transition-colors';
               const content = (
                 <>
                   <h3 className="text-lg font-bold text-black mb-2">{item.title}</h3>

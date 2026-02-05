@@ -5,6 +5,9 @@
   --color-gold: #B8860B;
   --color-gold-dark: #8B6914;
   --color-gold-pale: #F5ECD8;
+  /* Warm off-white for content areas - ties to black & gold */
+  --color-cream: #FAF9F6;
+  --color-cream-dark: #F5F0E8;
 }
 
 /* UCF Black & Gold theme */
@@ -17,5 +20,5 @@
 body {
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   color: #1a1a1a;
-  background-color: #fafafa;
+  background-color: var(--color-cream);
 }

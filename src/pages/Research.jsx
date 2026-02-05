@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import HeroBackground from '../components/HeroBackground';
 
 const researchAreas = [
   { path: '/research/football', label: 'Football', icon: '🏈' },
@@ -12,22 +11,14 @@ const researchAreas = [
 
 export default function Research() {
   return (
-    <main className="flex-1">
-      <section className="relative text-white py-16 md:py-24 overflow-hidden min-h-[280px] flex flex-col justify-center">
-        <HeroBackground />
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 text-center z-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gold">
-            Research Projects
-          </h1>
-          <p className="text-xl text-gray-300 leading-relaxed">
+    <main className="flex-1 bg-cream">
+      <section className="py-16 md:py-24">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <h1 className="text-4xl md:text-5xl font-bold mb-2 text-black">Research Projects</h1>
+          <p className="text-xl text-gray-600 mb-12">
             Our members conduct self-started analytical research across multiple sports, building portfolios
             that demonstrate professional-level analysis and insights.
           </p>
-        </div>
-      </section>
-
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {researchAreas.map((area) => (
               <Link
