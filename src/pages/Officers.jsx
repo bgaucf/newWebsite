@@ -1,17 +1,21 @@
 import knightroImage from '../assets/images/UCFS031_web_1_1.png';
+import colinHeadshot from '../assets/images/colinhs.jpg';
+import aidenHeadshot from '../assets/images/aidenellishs.jpg';
+import berliantHeadshot from '../assets/images/berlianths.jpg';
+import matthewHendersonHeadshot from '../assets/images/matthendersonhs.jpg';
 import HeroBackground from '../components/HeroBackground';
 
 const officers = [
-  { name: 'Colin Montie', role: 'President' },
-  { name: 'Ryan Cannon', role: 'Vice President' },
-  { name: 'Aiden Ellis', role: 'Secretary' },
-  { name: 'Jayden Cruz-Berdecia', role: 'DeVos SBM Liaison' },
-  { name: 'Isaiah Weaver', role: 'Treasurer' },
-  { name: 'Sam Jolicoeur', role: 'Treasurer' },
-  { name: 'Robert Hudson', role: 'Director of Projects & Competitions' },
-  { name: 'Matthew Berliant', role: 'Treasurer' },
-  { name: 'Matthew Henderson', role: 'Treasury Assistant' },
-  { name: 'Gabriel Macedo', role: 'Treasury Assistant' },
+  { name: 'Colin Montie', role: 'President', image: colinHeadshot },
+  { name: 'Ryan Cannon', role: 'Vice President', image: knightroImage },
+  { name: 'Aiden Ellis', role: 'Secretary', image: aidenHeadshot },
+  { name: 'Jayden Cruz-Berdecia', role: 'DeVos SBM Liaison', image: knightroImage },
+  { name: 'Isaiah Weaver', role: 'Treasurer', image: knightroImage },
+  { name: 'Sam Jolicoeur', role: 'Treasurer', image: knightroImage },
+  { name: 'Robert Hudson', role: 'Director of Projects & Competitions', image: knightroImage },
+  { name: 'Matthew Berliant', role: 'Treasurer', image: berliantHeadshot },
+  { name: 'Matthew Henderson', role: 'Treasury Assistant', image: matthewHendersonHeadshot },
+  { name: 'Gabriel Macedo', role: 'Treasury Assistant', image: knightroImage },
 ];
 
 export default function Officers() {
@@ -31,8 +35,8 @@ export default function Officers() {
                 className="flex items-center gap-6 bg-white/10 rounded-xl p-6 border border-gold/20 hover:border-gold/40 transition-colors"
               >
                 <img
-                  src={knightroImage}
-                  alt=""
+                  src={officer.image}
+                  alt={officer.name}
                   className="w-20 h-20 rounded-full object-cover flex-shrink-0 ring-2 ring-gold/50"
                 />
                 <div>

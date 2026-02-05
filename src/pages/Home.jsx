@@ -1,4 +1,3 @@
-import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import researchImage from '../assets/images/person-drawing-symbols-coming-out-light-bulb-top-book-1.jpg';
 import skillDevImage from '../assets/images/skills development plan.png';
@@ -27,36 +26,18 @@ const opportunities = [
   },
 ];
 
-const FADE_DURATION_MS = 400;
-
 export default function Home() {
-  const [isFading, setIsFading] = useState(false);
-  const videoRef = useRef(null);
-
-  const handleVideoEnded = () => {
-    setIsFading(true);
-    setTimeout(() => {
-      if (videoRef.current) {
-        videoRef.current.currentTime = 0;
-        videoRef.current.play();
-      }
-      setIsFading(false);
-    }, FADE_DURATION_MS);
-  };
-
   return (
     <main className="flex-1">
       {/* Hero Section */}
       <section className="relative text-white py-20 md:py-32 overflow-hidden min-h-[500px] flex flex-col justify-center">
         <video
-          ref={videoRef}
           src="/ucftunnel.mp4"
           autoPlay
+          loop
           muted
           playsInline
-          onEnded={handleVideoEnded}
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity ${isFading ? 'opacity-0' : 'opacity-100'}`}
-          style={{ transitionDuration: `${FADE_DURATION_MS}ms` }}
+          className="absolute inset-0 w-full h-full object-cover"
           aria-label="UCF tunnel"
         />
         <div className="absolute inset-0 bg-black/50" />
