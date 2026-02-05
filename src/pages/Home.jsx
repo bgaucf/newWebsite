@@ -32,7 +32,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative text-white py-20 md:py-32 overflow-hidden min-h-[500px] flex flex-col justify-center">
         <video
-          src="/tKjFX7IMqIoBSwAY.mp4"
+          src="/stadium-fireworks-vid.mp4"
           autoPlay
           loop
           muted
