@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 import researchImage from '../assets/images/person-drawing-symbols-coming-out-light-bulb-top-book-1.jpg';
 import skillDevImage from '../assets/images/skills development plan.png';
 import professionalInsightsImage from '../assets/images/BGAProfessionalLogo.png';
@@ -53,30 +54,82 @@ export default function Home() {
 
       {/* Mission Statement */}
       <section className="py-16 md:py-20 bg-cream">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+        <MissionStatement />
+      </section>
+
+      {/* Opportunities Section */}
+      <section className="py-20 md:py-28 bg-cream">
+        <OpportunitiesSection />
+      </section>
+    </main>
+  );
+}
+
+function MissionStatement() {
+  const [ref, isVisible] = useScrollReveal();
+  
+  return (
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <p
+        ref={ref}
+        className={`text-lg md:text-xl text-gray-700 leading-relaxed transition-all duration-700 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+        }`}
+      >
             The mission of Black & Gold Analytics is to transform curiosity into professional competence for aspiring
             sports analysts. We provide students with hands-on research opportunities, applied projects, speaker events,
             and mentorship to help them build practical skills, develop meaningful portfolios, and gain exposure to the
             sports analytics industry. Our programs give members the experience, guidance, and community they need to
             prepare for careers in front offices, performance departments, and scouting organizations without relying
             solely on securing internships.
-          </p>
-        </div>
-      </section>
+      </p>
+    </div>
+  );
+}
 
-      {/* Opportunities Section */}
-      <section className="py-20 md:py-28 bg-cream">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-black">
-            Opportunities
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {opportunities.map((opp, index) => (
-              <div
-                key={index}
-                className="bg-cream-dark rounded-xl overflow-hidden border border-gray-200 hover:border-gold/50 hover:shadow-lg transition-all group"
-              >
+function OpportunitiesSection() {
+  const [headerRef, headerVisible] = useScrollReveal();
+  
+  return (
+    <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <div
+        ref={headerRef}
+        className={`transition-all duration-700 mb-16 ${
+          headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+        }`}
+      >
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-black">
+          Opportunities
+        </h2>
+      </div>
+      <div className="grid md:grid-cols-3 gap-8">
+        {opportunities.map((opp, index) => (
+          <OpportunityCard key={index} opp={opp} index={index} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function OpportunityCard({ opp, index }) {
+  const [ref, isVisible] = useScrollReveal();
+  
+  return (
+    <div
+      ref={ref}
+      className={`bg-cream-dark rounded-xl overflow-hidden border border-gray-200 transition-all ${
+        opp.path ? 'hover:border-gold/50 hover:shadow-lg group' : ''
+      } ${
+        isVisible
+          ? 'opacity-100 translate-y-0'
+          : 'opacity-0 translate-y-4'
+      }`}
+      style={{
+        transitionDuration: '600ms',
+        transitionDelay: `${index * 100}ms`,
+        transitionProperty: 'opacity, transform',
+      }}
+    >
                 <div className="aspect-video w-full overflow-hidden bg-gray-200">
                   <img
                     src={opp.image}
@@ -101,11 +154,6 @@ export default function Home() {
                   </Link>
                 )}
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-    </main>
+    </div>
   );
 }

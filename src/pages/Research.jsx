@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 import ucfFootballImg from '../../ucffootball.png';
 import ucfBasketballImg from '../../ucfbasketball.png';
 import ucfBaseballImg from '../../ucfbaseball.png';
@@ -15,23 +16,24 @@ const researchAreas = [
   { path: '/research/other', label: 'Other', icon: '📊' },
 ];
 
-export default function Research() {
+function ResearchCard({ area, index }) {
+  const [ref, isVisible] = useScrollReveal();
+  
   return (
-    <main className="flex-1 bg-cream">
-      <section className="py-16 md:py-24">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <h1 className="text-4xl md:text-5xl font-bold mb-2 text-black">Research Projects</h1>
-          <p className="text-xl text-gray-600 mb-12">
-            Our members conduct self-started analytical research across multiple sports, building portfolios
-            that demonstrate professional-level analysis and insights.
-          </p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {researchAreas.map((area) => (
-              <Link
-                key={area.path}
-                to={area.path}
-                className="flex flex-col rounded-2xl overflow-hidden border border-gray-200 bg-white/90 hover:border-gold hover:bg-gold-pale/70 shadow-sm hover:shadow-md transition-all group"
-              >
+    <Link
+      ref={ref}
+      to={area.path}
+      className={`flex flex-col rounded-2xl overflow-hidden border border-gray-200 bg-white/90 hover:border-gold hover:bg-gold-pale/70 shadow-sm hover:shadow-md transition-all group ${
+        isVisible
+          ? 'opacity-100 translate-y-0'
+          : 'opacity-0 translate-y-4'
+      }`}
+      style={{
+        transitionDuration: '600ms',
+        transitionDelay: `${index * 100}ms`,
+        transitionProperty: 'opacity, transform',
+      }}
+    >
                 <div className="relative w-full h-40 rounded-t-2xl overflow-hidden bg-black/40">
                   {area.label === 'Football' && (
                     <img
@@ -110,7 +112,32 @@ export default function Research() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </div>
-              </Link>
+    </Link>
+  );
+}
+
+export default function Research() {
+  const [headerRef, headerVisible] = useScrollReveal();
+  
+  return (
+    <main className="flex-1 bg-cream">
+      <section className="py-16 md:py-24">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div
+            ref={headerRef}
+            className={`transition-all duration-700 ${
+              headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+            }`}
+          >
+            <h1 className="text-4xl md:text-5xl font-bold mb-2 text-black">Research Projects</h1>
+            <p className="text-xl text-gray-600 mb-12">
+              Our members conduct self-started analytical research across multiple sports, building portfolios
+              that demonstrate professional-level analysis and insights.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {researchAreas.map((area, index) => (
+              <ResearchCard key={area.path} area={area} index={index} />
             ))}
           </div>
         </div>
