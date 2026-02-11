@@ -86,6 +86,9 @@ function InstagramFeed() {
 function LinkedInFeed() {
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 className="text-xl md:text-2xl font-bold text-center text-black mb-6">
+        Connect With Us on LinkedIn
+      </h2>
       <div className="elfsight-app-6b8fc034-87f8-40d5-a117-2a25915a9a06" data-elfsight-app-lazy></div>
     </div>
   );
