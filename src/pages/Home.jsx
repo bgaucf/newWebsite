@@ -76,40 +76,16 @@ export default function Home() {
 }
 
 function InstagramFeed() {
-  const [ref, isVisible] = useScrollReveal();
-  
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6">
-      <div
-        ref={ref}
-        className={`transition-all duration-700 mb-8 ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-        }`}
-      >
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-black mb-4">
-          Follow Us on Instagram
-        </h2>
-      </div>
       <div className="elfsight-app-beac9de4-bfed-4204-89ae-c5aa2b9bed82" data-elfsight-app-lazy></div>
     </div>
   );
 }
 
 function LinkedInFeed() {
-  const [ref, isVisible] = useScrollReveal();
-  
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6">
-      <div
-        ref={ref}
-        className={`transition-all duration-700 mb-8 ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-        }`}
-      >
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-black mb-4">
-          Connect With Us on LinkedIn
-        </h2>
-      </div>
       <div className="elfsight-app-6b8fc034-87f8-40d5-a117-2a25915a9a06" data-elfsight-app-lazy></div>
     </div>
   );
