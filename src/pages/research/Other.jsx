@@ -1,3 +1,6 @@
+import CollapsiblePdfEmbed from '../../components/CollapsiblePdfEmbed';
+import strengthForecastPdf from '../../../workout_prediction_project.pdf';
+
 const projects = [
   {
     title: 'Forecasting Strength Training Performance with Machine Learning',
@@ -14,9 +17,16 @@ export default function Other() {
           <h1 className="text-4xl md:text-5xl font-bold mb-12 text-black">Other</h1>
           <div className="space-y-10">
             {projects.map((project, i) => (
-              <div key={i} className="border-l-4 border-gold pl-6">
+              <div key={i} className="pl-6">
                 <h2 className="text-xl font-bold text-black mb-2">{project.title}</h2>
                 <p className="text-gray-600 leading-relaxed">{project.description}</p>
+
+                {project.title === 'Forecasting Strength Training Performance with Machine Learning' && (
+                  <CollapsiblePdfEmbed
+                    src={strengthForecastPdf}
+                    title="Forecasting Strength Training Performance with Machine Learning"
+                  />
+                )}
               </div>
             ))}
           </div>

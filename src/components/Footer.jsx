@@ -14,7 +14,7 @@ export default function Footer() {
 
           <div className="flex gap-6">
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/bga_ucf/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-gold transition-colors"
@@ -36,7 +36,7 @@ export default function Footer() {
               </svg>
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/company/black-and-gold-analytics/posts/?feedView=all"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-gold transition-colors"
@@ -47,7 +47,7 @@ export default function Footer() {
               </svg>
             </a>
             <a
-              href="https://github.com"
+              href="https://github.com/bgaucf"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-gold transition-colors"

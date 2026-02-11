@@ -1,3 +1,8 @@
+import CollapsiblePdfEmbed from '../../components/CollapsiblePdfEmbed';
+import nbaImpactPdf from '../../../NBA Impact Score_ A New Metric for Player Contribution Measurement.pdf';
+import playerPlaySynergyPdf from '../../../Optimal Player-Play Synergy.pdf';
+import travelImpactPdf from '../../../BasketBall_Project (5).pdf';
+
 const projects = [
   {
     title: 'NBA Impact Score',
@@ -39,9 +44,30 @@ export default function Basketball() {
           <h1 className="text-4xl md:text-5xl font-bold mb-12 text-black">Basketball</h1>
           <div className="space-y-10">
             {projects.map((project, i) => (
-              <div key={i} className="border-l-4 border-gold pl-6">
+              <div key={i} className="pl-6">
                 <h2 className="text-xl font-bold text-black mb-2">{project.title}</h2>
                 <p className="text-gray-600 leading-relaxed">{project.description}</p>
+
+                {project.title === 'NBA Impact Score' && (
+                  <CollapsiblePdfEmbed
+                    src={nbaImpactPdf}
+                    title="NBA Impact Score: A New Metric for Player Contribution Measurement"
+                  />
+                )}
+
+                {project.title === 'Player-Play Synergy' && (
+                  <CollapsiblePdfEmbed
+                    src={playerPlaySynergyPdf}
+                    title="Optimal Player-Play Synergy"
+                  />
+                )}
+
+                {project.title === 'Travel Time Performance Impact' && (
+                  <CollapsiblePdfEmbed
+                    src={travelImpactPdf}
+                    title="Basketball Travel Workload and Performance"
+                  />
+                )}
               </div>
             ))}
           </div>

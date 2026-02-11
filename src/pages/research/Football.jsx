@@ -1,3 +1,18 @@
+import CollapsiblePdfEmbed from '../../components/CollapsiblePdfEmbed';
+import optimalOffensePdf from '../../../Optimal Offense Presentation.pdf';
+import qbTrustProcessPdf from '../../../Trust the Process.pdf';
+import bigDataBowlPdf from '../../../NFL Big Data Bowl 2025.pdf';
+import wrSpeedPdf from '../../../Wide Receiver Pre-Snap Speed Predicting Being Targeted.pdf';
+import cardinalsScoutingPdf from '../../../Cardinals Scouting Report.pdf';
+import fourthDownPdf from '../../../Analyzing and Estimating 4th Down Conversion Probability.pdf';
+import primaryRoutePdf from '../../../Primary Route Target Efficiency.pdf';
+import earlyDownPlaycallingPdf from '../../../Early-Down Playcalling Analysis.pdf';
+import runDeploymentPdf from '../../../Run Deployment Findings.pdf';
+import rushingEfficiencyPdf from '../../../Unpacking Rushing Efficiency_ Insights from NFL Yards Per Carry Analysis.pdf';
+import redzonePlaycallingPdf from '../../../Redzone Playcalling Efficiency.pdf';
+import capSpacePdf from '../../../Anatomy of a Champion - Where Are Teams Spending Their Cap Space.pdf';
+import prospectToProPdf from '../../../Prospect to Pro_ Predicting NFL Success from College Football Performance.pdf';
+
 const projects = [
   {
     title: 'The Statistically Offensive Scheme',
@@ -69,9 +84,94 @@ export default function Football() {
           <h1 className="text-4xl md:text-5xl font-bold mb-12 text-black">Football</h1>
           <div className="space-y-10">
             {projects.map((project, i) => (
-              <div key={i} className="border-l-4 border-gold pl-6">
+              <div key={i} className="pl-6">
                 <h2 className="text-xl font-bold text-black mb-2">{project.title}</h2>
                 <p className="text-gray-600 leading-relaxed">{project.description}</p>
+
+                {project.title === 'The Statistically Offensive Scheme' && (
+                  <CollapsiblePdfEmbed
+                    src={optimalOffensePdf}
+                    title="Optimal Offense Presentation"
+                  />
+                )}
+
+                {project.title === 'Quantifying QB Decision-Making in the Passing Game' && (
+                  <CollapsiblePdfEmbed
+                    src={qbTrustProcessPdf}
+                    title="Trust the Process"
+                  />
+                )}
+
+                {project.title === 'NFL Defensive Reaction Modeling – Big Data Bowl' && (
+                  <CollapsiblePdfEmbed
+                    src={bigDataBowlPdf}
+                    title="NFL Big Data Bowl 2025"
+                  />
+                )}
+
+                {project.title === 'Tracking Data Analysis of WR Pre-snap Mannerisms' && (
+                  <CollapsiblePdfEmbed
+                    src={wrSpeedPdf}
+                    title="Wide Receiver Pre-Snap Speed Predicting Being Targeted"
+                  />
+                )}
+
+                {project.title === 'Arizona Cardinals Scouting Report' && (
+                  <CollapsiblePdfEmbed
+                    src={cardinalsScoutingPdf}
+                    title="Cardinals Scouting Report"
+                  />
+                )}
+
+                {project.title === '4th Down Decision-Making' && (
+                  <CollapsiblePdfEmbed
+                    src={fourthDownPdf}
+                    title="Analyzing and Estimating 4th Down Conversion Probability"
+                  />
+                )}
+
+                {project.title === 'Charting Targeted Route Success' && (
+                  <CollapsiblePdfEmbed
+                    src={primaryRoutePdf}
+                    title="Primary Route Target Efficiency"
+                  />
+                )}
+
+                {project.title === 'Early Down Play Calling Analysis' && (
+                  <CollapsiblePdfEmbed
+                    src={earlyDownPlaycallingPdf}
+                    title="Early-Down Playcalling Analysis"
+                  />
+                )}
+
+                {project.title === 'Optimizing Run Game Performance: YPC Analysis' && (
+                  <CollapsiblePdfEmbed
+                    src={rushingEfficiencyPdf}
+                    title="Unpacking Rushing Efficiency: Insights from NFL Yards Per Carry Analysis"
+                    buttonLabel="View YPC analysis slides"
+                  />
+                )}
+
+                {project.title === 'Modeling Redzone Playcalling Efficiency' && (
+                  <CollapsiblePdfEmbed
+                    src={redzonePlaycallingPdf}
+                    title="Redzone Playcalling Efficiency"
+                  />
+                )}
+
+                {project.title === 'Championship NFL Team Salary Cap Analysis' && (
+                  <CollapsiblePdfEmbed
+                    src={capSpacePdf}
+                    title="Anatomy of a Champion - Where Are Teams Spending Their Cap Space"
+                  />
+                )}
+
+                {project.title === 'Prospect to Pro' && (
+                  <CollapsiblePdfEmbed
+                    src={prospectToProPdf}
+                    title="Prospect to Pro: Predicting NFL Success from College Football Performance"
+                  />
+                )}
               </div>
             ))}
           </div>
@@ -80,3 +180,4 @@ export default function Football() {
     </main>
   );
 }
+

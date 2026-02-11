@@ -1,3 +1,9 @@
+import CollapsiblePdfEmbed from '../../components/CollapsiblePdfEmbed';
+import situationalPitchPdf from '../../../Situational Pitch Efficacy.pdf';
+import stolenBasePdf from '../../../Stolen Base Project Presentation.pdf';
+import redsHackPdf from '../../../Reds Hack 25 Presentation.pdf';
+import fieldingPositionPdf from '../../../Baseball Fielding Position.pdf';
+
 const projects = [
   {
     title: 'Situational Pitch Efficacy',
@@ -29,9 +35,37 @@ export default function Baseball() {
           <h1 className="text-4xl md:text-5xl font-bold mb-12 text-black">Baseball</h1>
           <div className="space-y-10">
             {projects.map((project, i) => (
-              <div key={i} className="border-l-4 border-gold pl-6">
+              <div key={i} className="pl-6">
                 <h2 className="text-xl font-bold text-black mb-2">{project.title}</h2>
                 <p className="text-gray-600 leading-relaxed">{project.description}</p>
+
+                {project.title === 'Situational Pitch Efficacy' && (
+                  <CollapsiblePdfEmbed
+                    src={situationalPitchPdf}
+                    title="Situational Pitch Efficacy Presentation"
+                  />
+                )}
+
+                {project.title === 'Stolen Base Decision-Making' && (
+                  <CollapsiblePdfEmbed
+                    src={stolenBasePdf}
+                    title="Stolen Base Decision-Making Presentation"
+                  />
+                )}
+
+                {project.title === 'Predicting Player Playing Time - Cincinnati Reds Hackathon' && (
+                  <CollapsiblePdfEmbed
+                    src={redsHackPdf}
+                    title="Reds Hackathon 2025 Presentation"
+                  />
+                )}
+
+                {project.title === 'Examining the Effects of Fielder Positioning' && (
+                  <CollapsiblePdfEmbed
+                    src={fieldingPositionPdf}
+                    title="Baseball Fielding Position Presentation"
+                  />
+                )}
               </div>
             ))}
           </div>
