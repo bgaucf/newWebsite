@@ -169,8 +169,8 @@ function ContactSection() {
           </p>
           <p>
             <span className="font-semibold">President&apos;s Email:</span>{' '}
-            <a href="mailto:colin.montie@ucf.edu" className="text-gold-dark hover:text-gold font-medium">
-              colin.montie@ucf.edu
+            <a href="mailto:ry219340@ucf.edu" className="text-gold-dark hover:text-gold font-medium">
+              ry219340@ucf.edu
             </a>
           </p>
           <p>

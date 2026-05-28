@@ -7,18 +7,6 @@ import aidenHeadshot from '../assets/images/aidenellishs.jpg';
 
 const notableAlumni = [
   {
-    name: 'Colin Montie',
-    role: 'Former President',
-    title: '',
-    image: colinHeadshot,
-  },
-  {
-    name: 'Aiden Ellis',
-    role: 'Former Secretary',
-    title: '',
-    image: aidenHeadshot,
-  },
-  {
     name: 'Nathan Wright',
     role: 'Alumni President & Mentor',
     title: 'Performance Science Analyst - IMG Academy',
@@ -41,6 +29,18 @@ const notableAlumni = [
     role: 'Operations Analyst',
     title: 'BNY Mellon',
     image: knightroImage,
+  },
+  {
+    name: 'Colin Montie',
+    role: 'Former President',
+    title: '',
+    image: colinHeadshot,
+  },
+  {
+    name: 'Aiden Ellis',
+    role: 'Former Secretary',
+    title: '',
+    image: aidenHeadshot,
   },
 ];
 
