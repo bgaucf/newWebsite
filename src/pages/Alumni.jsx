@@ -4,6 +4,7 @@ import asaHeadshot from '../assets/images/asahs.jpg';
 import nickThomasHeadshot from '../assets/images/nickthomashs.jpg';
 import colinHeadshot from '../assets/images/colinhs.jpg';
 import aidenHeadshot from '../assets/images/aidenellishs.jpg';
+import jaydenHeadshot from '../assets/images/jaydenhs.jpg';
 
 const notableAlumni = [
   {
@@ -41,6 +42,12 @@ const notableAlumni = [
     role: 'Former Secretary',
     title: '',
     image: aidenHeadshot,
+  },
+  {
+    name: 'Jayden Cruz-Berdecia',
+    role: 'Former DeVos SBM Liaison',
+    title: '',
+    image: jaydenHeadshot,
   },
 ];
 
