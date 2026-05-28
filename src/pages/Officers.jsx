@@ -1,6 +1,4 @@
 import knightroImage from '../assets/images/UCFS031_web_1_1.png';
-import colinHeadshot from '../assets/images/colinhs.jpg';
-import aidenHeadshot from '../assets/images/aidenellishs.jpg';
 import berliantHeadshot from '../assets/images/berlianths.jpg';
 import matthewHendersonHeadshot from '../assets/images/matthendersonhs.jpg';
 import jaydenHeadshot from '../assets/images/jaydenhs.jpg';
@@ -9,9 +7,7 @@ import robertHeadshot from '../assets/images/roberths.jpg';
 import gabeHeadshot from '../assets/images/gabehs.jpg';
 
 const officers = [
-  { name: 'Colin Montie', role: 'President', image: colinHeadshot },
-  { name: 'Ryan Cannon', role: 'Vice President', image: knightroImage },
-  { name: 'Aiden Ellis', role: 'Secretary', image: aidenHeadshot },
+  { name: 'Ryan Cannon', role: 'President', image: knightroImage },
   { name: 'Jayden Cruz-Berdecia', role: 'DeVos SBM Liaison', image: jaydenHeadshot },
   { name: 'Isaiah Weaver', role: 'Treasurer', image: knightroImage },
   { name: 'Sam Jolicoeur', role: 'Treasurer', image: samHeadshot },

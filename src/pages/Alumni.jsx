@@ -2,8 +2,22 @@ import knightroImage from '../assets/images/UCFS031_web_1_1.png';
 import nathanHeadshot from '../assets/images/nathanhs.jpg';
 import asaHeadshot from '../assets/images/asahs.jpg';
 import nickThomasHeadshot from '../assets/images/nickthomashs.jpg';
+import colinHeadshot from '../assets/images/colinhs.jpg';
+import aidenHeadshot from '../assets/images/aidenellishs.jpg';
 
 const notableAlumni = [
+  {
+    name: 'Colin Montie',
+    role: 'Former President',
+    title: '',
+    image: colinHeadshot,
+  },
+  {
+    name: 'Aiden Ellis',
+    role: 'Former Secretary',
+    title: '',
+    image: aidenHeadshot,
+  },
   {
     name: 'Nathan Wright',
     role: 'Alumni President & Mentor',
